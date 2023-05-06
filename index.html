@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown=""
+				data-separator="^\n---$"
+				data-separator-vertical="^\n>>>$">
+				<script type="text/template">
+### 関数型プログラミングの世界
+
+（株）ボールド 技術部 鳥海秀一
+
+---
+### 講師紹介
+- - -
+* 名前：鳥海秀一
+* 出身：北海道
+* ボールド入社：2020年5月
+* 趣味：プログラミング
+<aside class="notes">
+  発表者が見るノート   
+  伝えたいことをメモ  
+</aside>
+
+---
+### 関数型言語とは
+- - -
+* 関数型プログラミング言語は、関数の合成によりプログラムを作成することを指向した言語である
+* 最初の関数型プログラミング言語は1958年にMITで作られたLISPと呼ばれる言語である
+* 2000年台に入りメジャーな言語が競って関数型言語の機能を取り入れ始めた
+* 現在では、関数型言語はプログラマにとって必須の知識の一つとなっている
+
+---
+### 関数型言語とラムダ計算
+- - -
+* 関数型言語は、ラムダ計算という計算モデルにもとづいたプログラミング言語といえる
+* ラムダ計算の計算可能性はチューリングマシンと等価である（チューリング完全）
+* ラムダ計算では、すべてのものを関数として表現し、計算をその簡約とし定義する
+* 関数型言語において、出力データは入力データの簡約として表現される
+
+---
+### 手続き型言語と関数型言語
+- - -
+* 手続き型言語と関数型言語の違いは、世界の認識の仕方の違いに帰着する
+* 手続き型は、時間・状態・物という概念を用いて世界を認識する仕方に対応する
+* その意味で、オブジェクト指向言語というのは手続き型言語の別の言い方となる
+* 関数型は、数学のような概念（情報）操作を用いて世界を認識する仕方に対応する
+* 情報の操作を行う場合に最も重要となる性質は、扱うデータの「内包性」である
+
+---
+### 内包性とは
+- - -
+* 集合の要素にある演算を作用させて得られた要素が、またその集合の要素である性質のこと
+* 『計算機プログラムの構造と解釈』では、関数型言語の重要な要素として[内包性](https://sicp.iijlab.net/fulltext/x220.html)を説明している
+* 内包性の例としては以下のものがある
+	* UNIXシェルにおけるテキストストリーム
+	* SQLにおけるリレーション集合（テーブル）
+	* 関数型言語におけるリスト
+
+---
+### 関数型プログラミングの勉強方法
+- - -
+1. UNIXシェルのパイプを使ったプログラミングスタイル（シェル芸）に慣れる
+1. 手続型で作成したプログラムをシェルのパイプで繋げてプログラムを完成させる
+1. irbなどのREPL環境を使用してプログラムを作成する
+
+---
+### 関数型プログラミングの実例
+- - -
+1. テキストファイル行数
+1. 頻出単語表示
+1. 素数列挙
+
+---
+### 次回予告
+- - -
+* 再帰関数の世界
+
+
+				</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
